@@ -26,8 +26,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
+    return Padding(
         padding: const EdgeInsets.only(left: 12.0, right: 12.0, top: 40.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -67,7 +66,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
             ),
           ],
         ),
-      ),
+      
     );
   }
 }
