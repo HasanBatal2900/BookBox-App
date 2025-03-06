@@ -1,4 +1,4 @@
-import 'package:book_box/features/splash/presentation/views/splash_view.dart';
+import 'package:book_box/router/app_router.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,9 +10,9 @@ class BookBoxApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-
-      home: SplashView(),
+    return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
+      routerConfig: AppRouter.router,
     );
   }
 }
