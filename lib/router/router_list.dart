@@ -25,16 +25,16 @@ List<RouteBase> routerList = [
       GoRoute(
         path: HomeBookView.route,
         pageBuilder: (context, state) =>
-            ScaleNavigation(screen: const HomeBookView()),
+            SlideToLeftNavigation(screen: const HomeBookView()),
       ),
       GoRoute(
         path: FavoriateBookView.route,
         pageBuilder: (context, state) =>
-            ScaleNavigation(screen: const FavoriateBookView()),
+            SlideToRightNavigation(screen: const FavoriateBookView()),
       ),
       GoRoute(
         path: BookDetailsView.route,
-        pageBuilder: (context, state) => SlideToRightNavigation(
+        pageBuilder: (context, state) => ScaleNavigation(
           screen: const BookDetailsView(),
           // add param here to pass it to the view
         ),
