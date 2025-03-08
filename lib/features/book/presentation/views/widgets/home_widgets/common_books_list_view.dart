@@ -1,8 +1,9 @@
 import 'package:book_box/core/utils/image_app.dart';
+import 'package:book_box/features/book/presentation/views/widgets/home_widgets/book_image.dart';
 import 'package:flutter/material.dart';
 
-class CommonBooksListView extends StatelessWidget {
-  const CommonBooksListView({super.key});
+class CommonBooksSliverListView extends StatelessWidget {
+  const CommonBooksSliverListView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,20 +15,9 @@ class CommonBooksListView extends StatelessWidget {
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: 10,
-            itemBuilder: (context, index) => Padding(
-              padding:const EdgeInsets.only(right: 2),
-              child: AspectRatio(
-                aspectRatio: 1.5 / 2.2,
-                child: GestureDetector(
-                  onTap: () {},
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(10.0),
-                    child: Image.asset(
-                      ImageApp.bookImage,
-                    ),
-                  ),
-                ),
-              ),
+            itemBuilder: (context, index) =>const Padding(
+              padding:  EdgeInsets.only(right: 2),
+              child: CustomBookImage(image: ImageApp.bookImage)
             ),
           ),
         ),
