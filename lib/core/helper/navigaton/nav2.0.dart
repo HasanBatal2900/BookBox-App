@@ -25,7 +25,7 @@ class SlideToLeftNavigation extends CustomTransitionPage {
   SlideToLeftNavigation({required this.screen})
       : super(
           child: screen,
-          transitionDuration: const Duration(milliseconds: 1000),
+          transitionDuration: const Duration(milliseconds: 800),
           transitionsBuilder: (context, animation, secondaryAnimation, child) {
             animation =
                 CurvedAnimation(curve: Curves.fastOutSlowIn, parent: animation);
@@ -45,7 +45,7 @@ class SlideToDownNavigation extends CustomTransitionPage {
   SlideToDownNavigation({required this.screen})
       : super(
           child: screen,
-          transitionDuration: const Duration(milliseconds: 1000),
+          transitionDuration: const Duration(milliseconds: 800),
           transitionsBuilder: (context, animation, secondaryAnimation, child) {
             animation =
                 CurvedAnimation(curve: Curves.fastOutSlowIn, parent: animation);
@@ -65,7 +65,7 @@ class SlideToUpNavigation extends CustomTransitionPage {
   SlideToUpNavigation({required this.screen})
       : super(
           child: screen,
-          transitionDuration: const Duration(milliseconds: 1000),
+          transitionDuration: const Duration(milliseconds: 800),
           transitionsBuilder: (context, animation, secondaryAnimation, child) {
             animation =
                 CurvedAnimation(curve: Curves.fastOutSlowIn, parent: animation);
@@ -85,7 +85,7 @@ class SlideToRightNavigation extends CustomTransitionPage {
   SlideToRightNavigation({required this.screen})
       : super(
           child: screen,
-          transitionDuration: const Duration(milliseconds: 1000),
+          transitionDuration: const Duration(milliseconds: 400),
           transitionsBuilder: (context, animation, secondaryAnimation, child) {
             animation =
                 CurvedAnimation(curve: Curves.fastOutSlowIn, parent: animation);
