@@ -25,9 +25,10 @@ class HomeViewBody extends StatelessWidget {
                 ),
                 IconButton(
                   onPressed: () {},
-                  icon: const Icon(
+                  icon:  Icon(
                     Icons.search,
                     size: 24,
+                    color: Theme.of(context).colorScheme.onBackground,
                   ),
                 ),
               ],
@@ -40,7 +41,9 @@ class HomeViewBody extends StatelessWidget {
             padding: kSymmetricPadding,
             child: Text(
               "Featured Books",
-              style: Styles.textStyle18,
+              style: Styles.textStyle18.copyWith(
+                color: Theme.of(context).colorScheme.onBackground
+              ),
             ),
           ),
         ),

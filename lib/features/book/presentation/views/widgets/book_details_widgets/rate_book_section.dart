@@ -28,8 +28,8 @@ class RatebookSection extends StatelessWidget {
           Text(
             "4.8",
             style: Styles.textStyle16.copyWith(
-              fontWeight: FontWeight.bold,
-            ),
+                fontWeight: FontWeight.bold,
+                color: Theme.of(context).colorScheme.onBackground),
           ),
           const Gap(5),
           SizedBox(
@@ -37,8 +37,10 @@ class RatebookSection extends StatelessWidget {
             child: Text(
               "(2390)",
               overflow: TextOverflow.ellipsis,
-              style: Styles.textStyle14
-                  .copyWith(fontWeight: FontWeight.bold, color: Colors.grey.shade700),
+              style: Styles.textStyle14.copyWith(
+                fontWeight: FontWeight.bold,
+                color: Colors.grey.shade700,
+              ),
             ),
           ),
         ],

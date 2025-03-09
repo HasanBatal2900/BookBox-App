@@ -1,4 +1,3 @@
-import 'package:book_box/core/constants/colors.dart';
 import 'package:book_box/core/constants/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -29,7 +28,7 @@ class SubmitIconedButton extends StatelessWidget {
       height: 30,
       minWidth: 100,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-      color: backgroundColor ?? ColorApp.kPrimaryColor,
+      color: Theme.of(context).colorScheme.primary,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

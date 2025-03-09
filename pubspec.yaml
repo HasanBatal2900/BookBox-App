@@ -47,6 +47,7 @@ dependencies:
   easy_localization: ^3.0.7+1
   flutter_screenutil: ^5.9.3
   like_button: ^2.0.5
+  get_it: ^8.0.3
 
 dev_dependencies:
   flutter_test:

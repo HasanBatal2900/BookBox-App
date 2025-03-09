@@ -1,4 +1,3 @@
-import 'package:book_box/core/constants/colors.dart';
 import 'package:book_box/core/constants/padding.dart';
 import 'package:book_box/core/constants/strings.dart';
 import 'package:book_box/core/constants/styles.dart';
@@ -28,7 +27,7 @@ class OnboardingViewBody extends StatelessWidget {
                 alignment: Alignment.center,
                 child: Image.asset(
                   ImageApp.wavyLines,
-                  color: ColorApp.kPrimaryColor,
+                  color: Theme.of(context).colorScheme.primary,
                 )
                     .animate()
                     .slideY(
