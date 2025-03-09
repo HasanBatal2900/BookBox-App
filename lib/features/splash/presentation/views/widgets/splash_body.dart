@@ -1,4 +1,3 @@
-import 'package:book_box/core/constants/colors.dart';
 import 'package:book_box/core/constants/styles.dart';
 import 'package:book_box/core/utils/image_app.dart';
 import 'package:book_box/features/onboarding/presentation/views/onboarding_view.dart';
@@ -27,46 +26,47 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: const EdgeInsets.only(left: 12.0, right: 12.0, top: 40.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Center(
-              child: Image.asset(
-                ImageApp.logo,
-                height: 200.0,
-                width: 200,
+      padding: const EdgeInsets.only(left: 12.0, right: 12.0, top: 40.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: Image.asset(
+              ImageApp.logo,
+              height: 200.0,
+              width: 200,
+            ),
+          ),
+          const SpinKitWaveSpinner(
+            color: Colors.white,
+            size: 50,
+            waveColor: Color.fromARGB(255, 34, 125, 199),
+            duration: Duration(seconds: 3, milliseconds: 100),
+          ),
+          const Gap(10),
+          Center(
+            child: Text(
+              "Loading...",
+              style: Styles.textStyle20.copyWith(
+                color: Colors.white,
               ),
-            ),
-             SpinKitWaveSpinner(
-              color: ColorApp.kPrimaryColor,
-              size: 50,
-              waveColor: Colors.teal,
-              duration:const Duration(seconds: 3, milliseconds: 100),
-            ),
-            const Gap(10),
-            Center(
-              child: Text(
-                "Loading...",
-                style: Styles.textStyle20,
-              )
-                  .animate()
-                  .slideY(
-                      duration: const Duration(seconds: 2),
-                      begin: -2,
-                      end: 0,
-                      curve: Curves.bounceOut)
-                  .animate(
-                      onComplete: (controller) => controller.repeat(),
-                      delay: const Duration(milliseconds: 500))
-                  .fade(
-                    duration: const Duration(seconds: 3),
-                  ),
-            ),
-          ],
-        ),
-      
+            )
+                .animate()
+                .slideY(
+                    duration: const Duration(seconds: 2),
+                    begin: -2,
+                    end: 0,
+                    curve: Curves.bounceOut)
+                .animate(
+                    onComplete: (controller) => controller.repeat(),
+                    delay: const Duration(milliseconds: 500))
+                .fade(
+                  duration: const Duration(seconds: 3),
+                ),
+          ),
+        ],
+      ),
     );
   }
 }
