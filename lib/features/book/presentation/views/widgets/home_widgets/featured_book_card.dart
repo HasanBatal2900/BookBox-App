@@ -34,7 +34,7 @@ class FeaturedBookCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
-                    width: MediaQuery.sizeOf(context).width * .65,
+                    width: MediaQuery.sizeOf(context).width * .6,
                     child: Text(
                       "Harry Potter and the Goblet of fire",
                       style: Styles.textStyle24,
