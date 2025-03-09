@@ -32,13 +32,13 @@ List<RouteBase> routerList = [
         pageBuilder: (context, state) =>
             SlideToRightNavigation(screen: const FavoriateBookView()),
       ),
-      GoRoute(
-        path: BookDetailsView.route,
-        pageBuilder: (context, state) => ScaleNavigation(
-          screen: const BookDetailsView(),
-          // add param here to pass it to the view
-        ),
-      )
     ],
+  ),
+  GoRoute(
+    path: BookDetailsView.route,
+    pageBuilder: (context, state) => ScaleNavigation(
+      screen: const BookDetailsView(),
+      // add param here to pass it to the view
+    ),
   ),
 ];
