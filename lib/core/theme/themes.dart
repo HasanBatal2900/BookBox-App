@@ -56,7 +56,7 @@ ThemeData darkTheme = ThemeData(
   scaffoldBackgroundColor: ColorApp.kDarkBackground,
   colorScheme: ColorScheme.fromSeed(
     seedColor: ColorApp.kPrimaryColor,
-    background: Colors.black,
+    background: ColorApp.kDarkBackground,
     secondary: ColorApp.kSecondryColor,
     onBackground: Colors.white,
     primary: ColorApp.kPrimaryColor,
