@@ -21,11 +21,13 @@ class HomeViewBody extends StatelessWidget {
                 const OpenDrawerButton(),
                 Text(
                   "BookBox",
-                  style: Styles.textStyle24,
+                  style: Styles.textStyle24.copyWith(
+                    color: Theme.of(context).colorScheme.onBackground,
+                  ),
                 ),
                 IconButton(
                   onPressed: () {},
-                  icon:  Icon(
+                  icon: Icon(
                     Icons.search,
                     size: 24,
                     color: Theme.of(context).colorScheme.onBackground,
@@ -41,9 +43,8 @@ class HomeViewBody extends StatelessWidget {
             padding: kSymmetricPadding,
             child: Text(
               "Featured Books",
-              style: Styles.textStyle18.copyWith(
-                color: Theme.of(context).colorScheme.onBackground
-              ),
+              style: Styles.textStyle18
+                  .copyWith(color: Theme.of(context).colorScheme.onBackground),
             ),
           ),
         ),

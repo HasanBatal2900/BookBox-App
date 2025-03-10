@@ -33,13 +33,12 @@ class FeaturedBookCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
-                    color: Theme.of(context).colorScheme.background,
+                  SizedBox(
                     width: MediaQuery.sizeOf(context).width * .6,
                     child: Text(
                       "Harry Potter and the Goblet of fire",
                       style: Styles.textStyle24.copyWith(
-                        color: Theme.of(context).colorScheme.onBackground
+                        color: Theme.of(context).colorScheme.onBackground,
                       ),
                       maxLines: 2,
                     ),
@@ -48,8 +47,7 @@ class FeaturedBookCard extends StatelessWidget {
                   Text(
                     "J.KRowling",
                     style: Styles.textStyle18.copyWith(
-                      color: Theme.of(context).colorScheme.onBackground
-                    ),
+                        color: Theme.of(context).colorScheme.onBackground),
                   ),
                   const Gap(2),
                   Row(
@@ -59,9 +57,9 @@ class FeaturedBookCard extends StatelessWidget {
                         child: Text(
                           "19.99\$",
                           style: Styles.textStyle18.copyWith(
-                            fontWeight: FontWeight.bold,
-                            color: Theme.of(context).colorScheme.onBackground
-                          ),
+                              fontWeight: FontWeight.bold,
+                              color:
+                                  Theme.of(context).colorScheme.onBackground),
                         ),
                       ),
                       const RatebookSection(),

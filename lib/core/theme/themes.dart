@@ -27,13 +27,12 @@ ThemeData lightTheme = ThemeData(
       scrim: Colors.blueAccent,
     ),
     bottomAppBarTheme: const BottomAppBarTheme(
-      color: ColorApp.kPrimaryColor,
+      color: Colors.white,
     ));
 
 ThemeData darkTheme = ThemeData(
   bottomAppBarTheme: const BottomAppBarTheme(
-    color: ColorApp.kPrimaryColor,
-    
+    color: ColorApp.kDarkBackground,
   ),
   useMaterial3: true,
   datePickerTheme: const DatePickerThemeData(

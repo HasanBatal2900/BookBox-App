@@ -14,7 +14,7 @@ class OpenDrawerButton extends StatelessWidget {
         icon: Icon(
           Icons.menu_open_rounded,
           size: 30,
-          color: Colors.black,
+          color: Theme.of(context).colorScheme.onBackground,
         ),
       ),
     );

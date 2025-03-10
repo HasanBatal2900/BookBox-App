@@ -17,49 +17,44 @@ class _HomeBottomNavigationBarState extends State<HomeBottomNavigationBar> {
   int index = 0;
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      child: BottomNavigationBar(
-        // backgroundColor: Theme.of(context).colorScheme.primary,
-        unselectedLabelStyle: Styles.textStyle12.copyWith(
-          color: Colors.pink.withOpacity(.6),
+    return BottomNavigationBar(
+      backgroundColor: Theme.of(context).bottomAppBarTheme.color,
+      unselectedLabelStyle: Styles.textStyle12,
+      selectedLabelStyle: Styles.textStyle12.copyWith(
+        color: Colors.white,
+      ),
+      fixedColor: Theme.of(context).colorScheme.onBackground,
+      landscapeLayout: BottomNavigationBarLandscapeLayout.linear,
+      elevation: 6.0,
+      iconSize: 24,
+      showUnselectedLabels: false,
+      type: BottomNavigationBarType.fixed,
+      showSelectedLabels: true,
+      currentIndex: _calculateSelectedIndex(context),
+      onTap: (value) => onPressed(value),
+      items: [
+        BottomNavigationBarItem(
+          icon: Icon(
+            Icons.home,
+            color: Colors.grey.withOpacity(0.6),
+          ),
+          label: "Home",
+          activeIcon: Icon(
+            Icons.home,
+            color: Theme.of(context).colorScheme.onBackground,
+          ),
         ),
-        selectedLabelStyle: Styles.textStyle12.copyWith(
-          color: Colors.white,
-        ),
-        fixedColor: Theme.of(context).colorScheme.primary,
-
-        landscapeLayout: BottomNavigationBarLandscapeLayout.linear,
-        elevation: 6.0,
-        iconSize: 24,
-        showUnselectedLabels: false,
-        type: BottomNavigationBarType.fixed,
-        showSelectedLabels: true,
-        currentIndex: _calculateSelectedIndex(context),
-        onTap: (value) => onPressed(value),
-        items: [
-          BottomNavigationBarItem(
+        BottomNavigationBarItem(
+            activeIcon: Icon(
+              FontAwesomeIcons.solidHeart,
+              color: Theme.of(context).colorScheme.onBackground,
+            ),
             icon: Icon(
-              Icons.home,
+              FontAwesomeIcons.solidHeart,
               color: Colors.grey.withOpacity(0.6),
             ),
-            label: "Home",
-            activeIcon: Icon(
-              Icons.home,
-              color: Theme.of(context).colorScheme.primary,
-            ),
-          ),
-          BottomNavigationBarItem(
-              activeIcon: Icon(
-                FontAwesomeIcons.solidHeart,
-                color: Theme.of(context).colorScheme.primary,
-              ),
-              icon: Icon(
-                FontAwesomeIcons.solidHeart,
-                color: Colors.grey.withOpacity(0.6),
-              ),
-              label: "Favoriate"),
-        ],
-      ),
+            label: "Favoriate"),
+      ],
     );
   }
 
