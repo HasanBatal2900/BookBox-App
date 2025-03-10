@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 ThemeData lightTheme = ThemeData(
     useMaterial3: true,
-
     datePickerTheme: const DatePickerThemeData(
       backgroundColor: Colors.white,
       headerHeadlineStyle: TextStyle(
@@ -28,10 +27,14 @@ ThemeData lightTheme = ThemeData(
       scrim: Colors.blueAccent,
     ),
     bottomAppBarTheme: const BottomAppBarTheme(
-      color: Colors.black,
+      color: ColorApp.kPrimaryColor,
     ));
 
 ThemeData darkTheme = ThemeData(
+  bottomAppBarTheme: const BottomAppBarTheme(
+    color: ColorApp.kPrimaryColor,
+    
+  ),
   useMaterial3: true,
   datePickerTheme: const DatePickerThemeData(
     backgroundColor: Colors.white,

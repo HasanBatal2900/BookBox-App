@@ -1,4 +1,3 @@
-import 'package:book_box/core/constants/colors.dart';
 import 'package:book_box/core/constants/styles.dart';
 import 'package:book_box/features/book/presentation/views/favoriate_book_view.dart';
 import 'package:book_box/features/book/presentation/views/home_book_view.dart';
@@ -18,44 +17,45 @@ class _HomeBottomNavigationBarState extends State<HomeBottomNavigationBar> {
   int index = 0;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-        boxShadow: [
-          BoxShadow(color: Colors.black, blurRadius: 1, offset: Offset(1, 0)),
-        ],
-      ),
+    return SizedBox(
       child: BottomNavigationBar(
-        unselectedLabelStyle: Styles.textStyle12,
-        selectedLabelStyle: Styles.textStyle12,
-        fixedColor: ColorApp.kPrimaryColor,
+        // backgroundColor: Theme.of(context).colorScheme.primary,
+        unselectedLabelStyle: Styles.textStyle12.copyWith(
+          color: Colors.pink.withOpacity(.6),
+        ),
+        selectedLabelStyle: Styles.textStyle12.copyWith(
+          color: Colors.white,
+        ),
+        fixedColor: Theme.of(context).colorScheme.primary,
+
         landscapeLayout: BottomNavigationBarLandscapeLayout.linear,
         elevation: 6.0,
         iconSize: 24,
-        showUnselectedLabels: true,
+        showUnselectedLabels: false,
         type: BottomNavigationBarType.fixed,
         showSelectedLabels: true,
         currentIndex: _calculateSelectedIndex(context),
         onTap: (value) => onPressed(value),
-        items: const [
+        items: [
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home,
-              color: Colors.grey,
+              color: Colors.grey.withOpacity(0.6),
             ),
             label: "Home",
             activeIcon: Icon(
               Icons.home,
-              color: ColorApp.kPrimaryColor,
+              color: Theme.of(context).colorScheme.primary,
             ),
           ),
           BottomNavigationBarItem(
               activeIcon: Icon(
                 FontAwesomeIcons.solidHeart,
-                color: ColorApp.kPrimaryColor,
+                color: Theme.of(context).colorScheme.primary,
               ),
               icon: Icon(
                 FontAwesomeIcons.solidHeart,
-                color: Colors.grey,
+                color: Colors.grey.withOpacity(0.6),
               ),
               label: "Favoriate"),
         ],
