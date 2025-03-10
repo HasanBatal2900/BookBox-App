@@ -3,6 +3,7 @@ import 'package:book_box/di/serivce_locater.dart';
 import 'package:book_box/router/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,10 +21,15 @@ class BookBoxApp extends StatelessWidget {
     return BlocProvider(
       create: (context) => ThemeCubit(),
       child: BlocBuilder<ThemeCubit, ThemeData>(
-        builder: (context, state) => MaterialApp.router(
-          theme: BlocProvider.of<ThemeCubit>(context).getTheme(),
-          debugShowCheckedModeBanner: false,
-          routerConfig: AppRouter.router,
+        builder: (context, state) => ScreenUtilInit(
+          designSize: const Size(360, 690),
+          splitScreenMode: true,
+          minTextAdapt: true,
+          builder: (context, child) => MaterialApp.router(
+            theme: BlocProvider.of<ThemeCubit>(context).getTheme(),
+            debugShowCheckedModeBanner: false,
+            routerConfig: AppRouter.router,
+          ),
         ),
       ),
     );
