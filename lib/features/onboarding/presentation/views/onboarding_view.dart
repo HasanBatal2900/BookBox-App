@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 
 class OnboardingView extends StatelessWidget {
   const OnboardingView({super.key});
-static const route = '/onboarding';
+  static const route = '/onboarding';
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      
-      body: OnboardingViewBody());
+      body: OnboardingViewBody(),
+    );
   }
 }

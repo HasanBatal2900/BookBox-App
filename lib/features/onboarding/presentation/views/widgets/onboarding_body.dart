@@ -19,7 +19,7 @@ class OnboardingViewBody extends StatelessWidget {
         Positioned(
             height: 100,
             left: 30,
-            top: MediaQuery.sizeOf(context).height * .3,
+            top: MediaQuery.sizeOf(context).height * .32,
             child: Transform.rotate(
               angle: -90,
               child: Transform.scale(
@@ -54,7 +54,9 @@ class OnboardingViewBody extends StatelessWidget {
             padding: kDefaultPadding,
             child: Text(
               StringConstants.kOnboardingMessage,
-              style: Styles.textStyle36,
+              style: Styles.textStyle36.copyWith(
+                color: Theme.of(context).colorScheme.onBackground,
+              ),
             ),
           )
               .animate()
@@ -85,9 +87,7 @@ class OnboardingViewBody extends StatelessWidget {
           child: Container(
             height: 80,
             width: MediaQuery.sizeOf(context).width,
-            decoration: const BoxDecoration(
-              color: Colors.white,
-            ),
+            color: Theme.of(context).colorScheme.background,
             child: Padding(
               padding: const EdgeInsets.all(12.0),
               child: SubmitIconedButton(

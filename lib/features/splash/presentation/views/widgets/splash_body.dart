@@ -38,10 +38,10 @@ class _SplashViewBodyState extends State<SplashViewBody> {
               width: 200,
             ),
           ),
-           SpinKitWaveSpinner(
-            color: Theme.of(context).colorScheme.background,
+          SpinKitWaveSpinner(
+            color: Colors.white.withOpacity(0.8),
             size: 50,
-            waveColor:Theme.of(context).colorScheme.secondary,
+            waveColor: Theme.of(context).colorScheme.secondary,
             duration: const Duration(seconds: 3, milliseconds: 100),
           ),
           const Gap(10),
@@ -49,7 +49,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
             child: Text(
               "Loading...",
               style: Styles.textStyle20.copyWith(
-                color: Theme.of(context).colorScheme.background,
+                color: Colors.white,
               ),
             )
                 .animate()
